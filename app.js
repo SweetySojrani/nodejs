@@ -142,7 +142,7 @@ var page = function( req, res, state, ts ) {
         collection.find( {serialNumber: '1234998871109'}).toArray( function(err, results) {
 
                 var data = results[0] ;
-                var rec_id = data._id ;
+                var rec_id = data;
                 console.log( "fetched rec id: " + rec_id ) ;
                 var result = new Object() ;
                 hash = get_hash ( state, ts ) ;
